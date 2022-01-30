@@ -4,22 +4,42 @@ body{
     margin: 0;
     font-family: 'Merriweather', serif;
 }
-.navbar{
-    background-color: #503624 !important;
+
+#homeLink{
+    text-decoration: underline;
+    color: white;
 }
 
+#homeLink:hover{
+    text-decoration: none;
+    color: #d37648;
+}
+
+footer{
+    background-color:#ffffff00; 
+    text-align: center;
+    height: 55px;
+    flex-shrink: 0;
+    padding-top: 5px;
+}
+
+.navbar{
+    background-color: #ffffff00 !important;
+}
+
+.nav-text:hover{
+    color: #d37648;
+}
 
 .home{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url('mars.jpg');
+    background-image: url('images/mars.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: grey;
 }
-
-
 
 .slogan{
     flex: 1 0 auto;
@@ -27,7 +47,25 @@ body{
     text-align: center;
     margin: 0 auto 0 auto;
     padding-top: 15%;
-    font-size: 100px;
+    padding-bottom: -50px;
+    font-size: 150px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.sub-slogan{
+    flex: 1 0 auto;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.git-link{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+.git-link:hover{
+    color: hotpink;
+    text-decoration: none;
 }
 
