@@ -1,0 +1,29 @@
+name: UpdateServer
+
+on:
+  # Triggers when something in the www path on the main branch of your repo changes
+  push:
+    branches: [ master ]
+    paths: [ 'www/**' ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout files
+        uses: actions/checkout@v2
+
+      # Use this marketplace step to copy files over SCP. 
+      # This copies everything in the www dir of your repo to your /var/www/html directory        
+      - name: Copy website files
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: www
+          remote: /var/www/mars
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USER }}
+          privateKey: ${{ secrets.KEY }}  
