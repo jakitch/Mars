@@ -41,6 +41,136 @@ footer{
     background-color: grey;
 }
 
+.mission{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('images/marsrover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e5cf9e;
+}
+
+.colonies{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('images/marsrover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e5cf9e;
+}
+
+.embark{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url('images/corridor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e5cf9e;
+}
+
+.embark-col{
+    background-color: #503624;
+    width: 500px;
+    border-radius: 5px;
+    margin: 55px 50px auto;
+    color: white;
+    padding: 10px;
+}
+
+.embark-hr{
+    background-color: white;
+}
+
+.embark-text{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.e-col-head{
+    font-size: 30px;
+}
+
+.flex-container{
+    flex: 1 0 auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.flex-container-col{
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1 0 auto;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    flex-direction: row;
+}
+
+.article{
+    background-color: #503624;
+    color: white;
+    width: 750px;
+    margin: 60px auto;
+}
+.article-img{
+    width: 750px;
+    height: 500px;
+    
+}
+.article-text{
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.article-header{
+    font-size: 35px;
+    padding-top: 10px;
+}
+
+.mission-nav-text{
+    color: #503624;
+}
+
+.mission-nav-text:hover{
+    color: #d37648;
+}
+
+.colony-header{
+    color: #503624;
+    font-size: 85px;
+    margin-top: 55px;
+}
+
+.mission-header{
+    color: #503624;
+    font-size: 85px;
+    margin-top: 55px;
+}
+
+.embark-header{
+    color: white;
+    font-size: 85px;
+    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.mission-message{
+    width: 50%;
+    background-color: #503624;
+    margin: 0 auto;
+    color: white;
+    border-radius: 5px;
+    font-size: 35px;
+    margin-top: 60px;
+    padding: 10px;
+}
+
 .slogan{
     flex: 1 0 auto;
     color: white;
@@ -69,3 +199,173 @@ footer{
     text-decoration: none;
 }
 
+.month {
+    padding: 25px;
+    width: 100%;
+    background-color: gray;
+    text-align: center;
+}
+  
+.month ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: gray;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: white;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: white;
+    margin: 0;
+    text-align: left;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: gray;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #d37648;
+    color: white !important
+}
+
+#missionBar{
+    background-color: #503624 !important;
+}
+
+@media (max-width: 450px) {
+
+    .article-img{
+        margin: 10px auto;
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    .mission-header{
+        margin: 10px auto;
+        font-size: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .colony-header{
+        margin: 10px auto;
+        font-size: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .embark-header{
+        margin: 10px auto;
+        font-size: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #503624
+    }
+
+    .flex-container-col{
+        display: block;
+    }
+    
+    .embark-col{
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .colonies{
+        background-color: tan;
+        background-image: none;
+    }
+
+    .embark{
+        background-color: tan;
+        background-image: none;
+    }
+
+    .flex-container-col{
+        width: 100%;
+    }
+    .article{
+        margin: 10px auto;
+        width: 100%
+    }
+
+    .mission-message{
+        margin: 10px auto;
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .slogan{
+        font-size: 75px;
+    }
+      
+    .month ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    .month ul li {
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    
+    .weekdays{
+        text-align: left;
+        padding-left: 8%;
+    }
+
+    .weekdays li {
+        width: 12%;
+    }
+    .days{
+        text-align: left;
+        padding-left: 8%;
+
+    }
+    .days li {
+        list-style-type: none;
+        display: inline-block;
+        width: 12%;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size:12px;
+        color: gray;
+    }
+    
+    .days li .active {
+        padding: 5px;
+        background: #d37648;
+        color: white !important
+    }
+}
