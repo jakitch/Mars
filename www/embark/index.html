@@ -34,15 +34,14 @@
           Become a Colonist
         </h2>
         <hr class="embark-hr">
-        <p class="embark-text">
-          Please contact us at <br><em>colonist@discovermars.com</em><br> to begin your application.
+        
+        <p id="colonyDeparture" class="embark-text">
+          Select a Departure Date:
         </p>
-        <p class="embark-text">
-          Available Flight Days This Month:
-        </p>
-        <div class="month">
+        
+        <div id="colonySelect"><div class="month">
           <ul>
-            <li>February<br>2022</li>
+            <li id="monthName">March<br>2022</li>
           </ul>
         </div>
         
@@ -57,70 +56,8 @@
         </ul>
         
         <ul class="days">
+          
           <li> </li>
-          <li> </li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li><span class="active">5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li><span class="active">20</li>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-        </ul>
-        <p class="embark-text">
-          All flights take-off at 4pm GMT.
-        </p>
-      </div>
-      <div class="embark-col">
-        <h2 class = "e-col-head">
-          Visit Mars
-        </h2>
-        <hr class="embark-hr">
-        <p class="embark-text">
-          Please contact us at <br><em>visit@discovermars.com</em><br> to begin your application.
-        </p>
-        <p class="embark-text">
-          Available Flight Days This Month:
-        </p>
-
-        <div class="month">
-          <ul>
-            <li>February<br>2022</li>
-          </ul>
-        </div>
-
-        <ul class="weekdays">
-          <li>Su</li>
-          <li>Mo</li>
-          <li>Tu</li>
-          <li>We</li>
-          <li>Th</li>
-          <li>Fr</li>
-          <li>Sa</li>
-        </ul>
-        
-        <ul class="days">
           <li> </li>
           <li> </li>
           <li>1</li>
@@ -135,7 +72,7 @@
           <li>10</li>
           <li>11</li>
           <li>12</li>
-          <li><span class="active">13</li>
+          <li>13</li>
           <li>14</li>
           <li>15</li>
           <li>16</li>
@@ -148,18 +85,109 @@
           <li>23</li>
           <li>24</li>
           <li>25</li>
-          <li><span class="active">26</li>
+          <li>26</li>
           <li>27</li>
           <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          
         </ul>
-        <p class="embark-text">
+        <p class="embark-date">
           All flights take-off at 4pm GMT.
         </p>
+      
+        <div class="button-container">
+          <p id="confirmColonist">
+            Confirm Date
+          </p>
+          <p id="backToFlight">
+            Visit Instead
+          </p>
+        </div>
+      
+      </div>
+      </div>
+      <div class="embark-col">
+        <h2 class = "e-col-head">
+          Visit Mars
+        </h2>
+        <hr class="embark-hr">
+        
+        <p id="flightDeparture" class="embark-text">
+          Select a Departure Date:
+        </p>
+
+        <div id="flightSelect"><div class="month">
+          <ul>
+            <li>March<br>2022</li>
+          </ul>
+        </div>
+
+        <ul class="weekdays">
+          <li>Su</li>
+          <li>Mo</li>
+          <li>Tu</li>
+          <li>We</li>
+          <li>Th</li>
+          <li>Fr</li>
+          <li>Sa</li>
+        </ul>
+        
+        <ul class="days">
+          <li> </li>
+          <li> </li>
+          <li> </li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
+        <p class="embark-date">
+          All flights take-off at 4pm GMT.
+        </p>
+        <div class="button-container">
+          <p id="confirmFlight">
+            Confirm Date
+          </p>
+          <p id="backToColony">
+            Become a Colonist
+          </p>
+        </div>
+        </div>
       </div>
   </div>
   <footer><a class="git-link" href="https://github.com/jakitch/Mars"><img src='../images/gitlight.png'></a></footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="embark.js"></script>
 </body>
 </html>
