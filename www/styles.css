@@ -353,6 +353,9 @@ footer{
     #quoteButton{
         font-size: 20px;
     }
+    #quoteButton:hover{
+        color: white;
+    }
 
     .colony-button {
         font-size: 20px;
