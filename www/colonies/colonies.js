@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("yes");
-
 let epsilonButton = document.getElementById("epsilonButton");
 let piButton = document.getElementById("piButton");
 let omicronButton = document.getElementById("omicronButton");
