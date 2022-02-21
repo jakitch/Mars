@@ -140,6 +140,7 @@ footer{
     flex: 1 0 auto;
     margin: 0 auto 0 auto;
     text-align: center;
+    max-width: 100vw;
 }
 
 .flex-container-col{
@@ -204,17 +205,46 @@ footer{
     text-align: center;
 }
 
+
 .mission-message{
     width: 50%;
     background-color: #503624;
     margin: 0 auto;
     color: white;
     border-radius: 5px;
-    font-size: 35px;
-    margin-top: 60px;
+    font-size: 25px;
+    margin-top: 15px;
     padding: 10px;
 }
 
+#kanyeImg{
+    width: 350px;
+    height: 350px;
+}
+#kanyeCaption{
+    font-size: 30px;
+    width: max-content;
+}
+#kanyeQuote{
+    font-size: 25px;
+    width: max-content;
+    max-width: 50%;
+    font-style: italic;
+}
+#quoteButton{
+    cursor: pointer;
+    width: max-content;
+    color: white;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px auto;
+    font-size: 20px;
+}
+
+#quoteButton:hover{
+    color: #d37648;
+}
 .slogan{
     flex: 1 0 auto;
     color: white;
@@ -307,6 +337,23 @@ footer{
 
 @media (max-width: 450px) {
 
+    #kanyeImg{
+        width: 200px;
+        height: 200px;
+    }
+    #kanyeCaption{
+        font-size: 20px;
+        width: 100%;
+    }
+    #kanyeQuote{
+        font-size: 20px;
+        max-width: 100%;
+        width: 100%;
+    }
+    #quoteButton{
+        font-size: 20px;
+    }
+
     .colony-button {
         font-size: 20px;
         padding: 5px;
@@ -320,21 +367,21 @@ footer{
 
     .mission-header{
         margin: 10px auto;
-        font-size: 50px;
+        font-size: 35px;
         padding-left: 10px;
         padding-right: 10px;
     }
 
     .colony-header{
         margin: 10px auto;
-        font-size: 50px;
+        font-size: 35px;
         padding-left: 10px;
         padding-right: 10px;
     }
 
     .embark-header{
         margin: 10px auto;
-        font-size: 50px;
+        font-size: 35px;
         padding-left: 10px;
         padding-right: 10px;
         color: #503624
@@ -360,11 +407,11 @@ footer{
         margin: 10px auto;
         width: 100%
     }
-
+    
     .mission-message{
         margin: 10px auto;
         width: 100%;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .slogan{

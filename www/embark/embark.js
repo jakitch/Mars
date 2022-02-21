@@ -5,6 +5,18 @@ let departureDate = {
     day: null
 }
 
+let userTime;
+const key = "2e967210f29542c7bd0aeadf2b76358e";
+const url = `https://ipgeolocation.abstractapi.com/v1/?api_key=${key}&fields=timezone`;
+
+fetch(url)
+.then(function(response){
+    return response.json();
+}).then(function(json){
+    console.log(json);
+    userTime = json.timezone;
+    initEmbarkDate();
+})
 
 let colonyDays = document.getElementsByClassName("days")[0];
 
@@ -21,7 +33,7 @@ for(let i = 1; i <= 33; i++) {
         departureDate.element = item;
         departureDate.day = item.innerText;
         let embarkDate = document.getElementsByClassName("embark-date")[0];
-        embarkDate.innerText = `March ${departureDate.day} @ 4pm GMT`;
+        embarkDate.innerText = `March ${departureDate.day} @ ${convertTime(userTime.gmt_offset)} ${userTime.abbreviation}`;
         embarkDate.style.color = "yellow";
         showColonyButtons();
         toggleFlightScheduler(false);
@@ -43,7 +55,7 @@ for(let i = 1; i <= 33; i++) {
         departureDate.element = item;
         departureDate.day = item.innerText;
         let embarkDate = document.getElementsByClassName("embark-date")[1];
-        embarkDate.innerText = `March ${departureDate.day} @ 4pm GMT`;
+        embarkDate.innerText = `March ${departureDate.day} @ ${convertTime(userTime.gmt_offset)} ${userTime.abbreviation}`;
         embarkDate.style.color = "yellow";
         showFlightButtons();
         toggleColonyScheduler(false);
@@ -75,19 +87,64 @@ document.getElementById("backToFlight").addEventListener("click", function(event
     updateFlightCalendar();
 });
 
+function initEmbarkDate() {
+    let dates = document.getElementsByClassName("embark-date");
+    const text = `All flights take-off at ${convertTime(userTime.gmt_offset)} ${userTime.abbreviation}`; 
+    dates[0].innerText = text;
+    dates[1].innerText = text;
+}
+function convertTime(gmt_offset){
+    
+    let offset = Number(gmt_offset);
+    let currentHour = 4;
+    let am = false;
+
+    if(offset === 0)
+        return "4 pm";
+    else if(offset < 0) {
+        for(let i = 0; i < -1 * offset; i++) {
+            currentHour--;
+            if(currentHour == 0) {
+                currentHour = 12;
+            }
+            if(currentHour == 11) {
+                am = !am;
+            }
+        }
+    }
+    else if(offset > 0) {
+        for(let i = 0; i < offset; i++) {
+            currentHour++;
+            if(currentHour == 12) {
+                am = !am;
+            }
+            else if(currentHour == 13) {
+                currentHour = 1;
+            }
+        }
+    }
+
+    let suffix = "";
+    if (am)
+        suffix = "am";
+    else
+        suffix = "pm";
+
+    return `${currentHour} ${suffix}`;
+}
 
 function confirmColonist() {
     document.getElementById("colonySelect").style.display = "none";
     let confirmMessage = document.getElementById("colonyDeparture");
     confirmMessage.style.color = "yellow";
-    confirmMessage.innerText = `You are booked to depart on\nMarch ${departureDate.day} @ 4pm GMT`;
+    confirmMessage.innerText = `You are booked to depart on\nMarch ${departureDate.day} @ ${convertTime(userTime.gmt_offset)} ${userTime.abbreviation}`;
 }
 
 function confirmFlight() {
     document.getElementById("flightSelect").style.display = "none";
     let confirmMessage = document.getElementById("flightDeparture");
     confirmMessage.style.color = "yellow";
-    confirmMessage.innerText = `You are booked to depart on\nMarch ${departureDate.day} @ 4pm GMT`;
+    confirmMessage.innerText = `You are booked to depart on\nMarch ${departureDate.day} @ ${convertTime(userTime.gmt_offset)} ${userTime.abbreviation}`;
 }
 
 function showColonyButtons() {
@@ -134,7 +191,7 @@ function updateColonyCalendar(){
     }
     let departureText = document.getElementsByClassName("embark-date")[0];
     departureText.style.color = "yellow";
-    departureText.innerText = `March ${departureDate.day} @ 4pm GMT`;
+    departureText.innerText = `March ${departureDate.day} @ ${convertTime(userTime.gmt_offset)} ${userTime.abbreviation}`;
 }
 
 function updateFlightCalendar(){
@@ -153,6 +210,6 @@ function updateFlightCalendar(){
     }
     let departureText = document.getElementsByClassName("embark-date")[1];
     departureText.style.color = "yellow";
-    departureText.innerText = `March ${departureDate.day} @ 4pm GMT`;
+    departureText.innerText = `March ${departureDate.day} @ ${convertTime(userTime.gmt_offset)} ${userTime.abbreviation}`;
 }
 
