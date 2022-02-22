@@ -1,7 +1,7 @@
 let quote;
 
 function fetchQuote() {
-    const url = "https://api.kanye.rest?=";
+    const url = "https://api.kanye.rest";
     fetch(url)
         .then(function(response){
             return response.json();
